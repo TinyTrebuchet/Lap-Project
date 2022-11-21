@@ -8,7 +8,7 @@ sudo apt install ros-melodic-desktop-full
 ```
 
 ```sh
-pip 3 install mlagents
+pip3 install mlagents
 ```
 
 ```sh

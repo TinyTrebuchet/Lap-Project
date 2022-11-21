@@ -1,10 +1,14 @@
 # LAP Project Group1
-## <i>Make a find and retrieve game in ubity using simulated ROS environment then train the bot using reinforcement learning.</i>
+## <i>Make a find and retrieve game in Unity using simulated ROS environment then train the bot using reinforcement learning.</i>
 # setup
 Make sure you are running ubuntu 18.04.
 
 ```sh
 sudo apt install ros-melodic-desktop-full
+```
+
+```sh
+pip 3 install mlagents
 ```
 
 ```sh
@@ -17,6 +21,7 @@ cd Ros-Bridge-Setup
 ```sh
 source start.bash
 ```
+
 
 ```sh
 cd ..
@@ -57,6 +62,13 @@ roslaunch $(rospack find rosbridge_server)/launch/rosbridge_websocket.launch
 
 roslaunch $(rospack find turtlebot3_teleop)/launch/turtlebot3_teleop_key.launch
 ```
+
+Now import the mlagent pack by <b>Window > Package Manager > Import MLAgents.</b>
+
+Now Make a unity game object and add the CS-Assets/Botlearning.cs script to the turtulebot model.
+
+Your TurtuleBot is ready to go!
+
 ## Dependencies
 1. Ubuntu18.04
 2. ros-melodic

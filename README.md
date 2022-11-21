@@ -40,7 +40,7 @@ You need to install a few python requirements here based on the specific python 
 
 ```sh
 cat Ros-Bridge-Setup/environsetup.sh >> ~/.bashrc
-cat Ros-Bridge-Setup/Devel/setup.bash >> ~/.bashrc
+source Devel/setup.bash
 source bash
 ```
 

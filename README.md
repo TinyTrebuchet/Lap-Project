@@ -1,6 +1,6 @@
 # LAP Project Group1
 ## <i>Make a find and retrieve game in Unity using simulated ROS environment then train the bot using reinforcement learning.</i>
-# setup
+# Setup
 Make sure you are running ubuntu 18.04.
 
 ```sh

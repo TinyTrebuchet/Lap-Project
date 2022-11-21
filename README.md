@@ -1,4 +1,68 @@
 # LAP Project Group1
+## <i>Make a find and retrieve game in ubity using simulated ROS environment then train the bot using reinforcement learning.</i>
+# setup
+Make sure you are running ubuntu 18.04.
+
+```sh
+sudo apt install ros-melodic-desktop-full
+```
+
+```sh
+git clone https://github.com/TinyTrebuchet/Lap-Project.git
+```
+```sh
+cd Ros-Bridge-Setup
+```
+
+```sh
+source start.bash
+```
+
+```sh
+cd ..
+catkin_make
+```
+<i>If there is a error in importing Builtins module kindly copy paste the following lines of code in the rosauth properties python file, you may find the path of the same in the detailed error message in terminal.</i>
+
+```py
+try:
+    from Builtins import str
+except ImportErrror:
+    from __builtin__ import str
+```
+
+You need to install a few python requirements here based on the specific python errors.
+
+```sh
+cat Ros-Bridge-Setup/environsetup.sh >> ~/.bashrc
+cat Ros-Bridge-Setup/Devel/setup.bash >> ~/.bashrc
+source bash
+```
+
+Now run the following commands to start the instance of turtlebot.
+
+<b>Note you need to setup the turtulebot3 path in the launch file.</b>
+
+```sh
+roslaunch file_server publish_description_turtlebot2.launch
+```
+
+Add the instance of turtule-bot waffle to Unity.
+Now stop the above server.
+
+
+Now fire a instance of turtulebot sim.
+```sh
+roslaunch $(rospack find rosbridge_server)/launch/rosbridge_websocket.launch
+
+roslaunch $(rospack find turtlebot3_teleop)/launch/turtlebot3_teleop_key.launch
+```
+## Dependencies
+1. Ubuntu18.04
+2. ros-melodic
+3. python3.6+, python2.7+, gcc, g++
+4. make
+5. cmake
 
 ## Team Members
 1. Ashutosh Purohit
@@ -7,3 +71,4 @@
 4. Gaurav Guleria
 5. Akshat Raj Anand
 6. Amit Maindola
+
